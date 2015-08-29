@@ -1,0 +1,81 @@
+//header
+
+header
+  position relative
+  width 100%
+  height 90px
+  background $black
+  padding 0 25px
+  box-sizing border-box
+  @media $tablet 
+    height 110px
+  @media $laptop
+    padding 0 50px
+
+  // logo
+
+  img
+    position absolute
+    top 10px
+    left 50%
+    transform translateX(-50%)
+    width 232px
+    height 113px
+    z-index 2
+    @media $tablet
+      top 12px
+      left 10px
+      transform none
+    @media $desktop
+      left 0
+
+  // nav
+
+  nav
+    display none
+    @media $tablet
+      position absolute
+      width 400px
+      top 50%
+      transform translateY(-50%)
+      right 10px
+      display block
+      @media $laptop
+        transform translateY(-15%)
+        width 496px
+      @media $desktop
+        right 0
+      ul
+        margin 0
+        padding 0
+        width 100%
+        list-style none
+        li
+          display inline-block
+          width: 32%
+          margin 10px 0
+          text-align center
+          a
+            color $white
+            text-decoration none
+            transition all 0.2s ease-in-out
+            &:hover
+              color $yellow
+
+    // responsive nav styles
+
+    @media $tablet
+      ul li a 
+        display block
+
+    @media $laptop
+      ul li
+        display inline
+        margin 0 15px
+        a
+          display inline
+        &:nth-child(1)
+          margin 0
+        &:nth-child(6)
+          margin 0
+

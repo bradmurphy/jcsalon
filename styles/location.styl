@@ -1,0 +1,53 @@
+// location styles
+
+.location 
+  width 100%
+  padding: 0 10px
+  box-sizing border-box
+  @media $desktop
+    padding 0
+
+// map container styles
+
+.map-container
+  width 100%
+
+  // map styles
+
+  .map
+    display none
+    @media $tablet
+      display block
+      width 100%
+      height 380px
+      background $black
+
+  // info-block styles
+
+  .info-block
+    float left
+    width 100%
+    @media $android
+      width 50%
+    @media $tablet
+      width 33.33333333333333%
+    @media $desktop
+      width 25%
+    
+    span
+      width 100%
+      display inline-block
+
+    .lock-up
+      width 100%
+      display block
+      margin-top 10px
+      a
+        color $aqua
+
+      .social
+        margin-top 5px
+        width 100%
+        a img
+          width 25px
+          height 25px
