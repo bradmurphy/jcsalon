@@ -14,9 +14,7 @@ var Animation = function() {
 			this.locationHeader,
 			this.locationCopy,
 			this.map
-		], 0.25, { autoAlpha: 1, ease: Power4.easeIn }, '0.15');
-
-	console.log('animation');
+		], 0.5, { autoAlpha: 1, ease: Power4.easeIn }, '0.2');
 
 };
 
