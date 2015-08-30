@@ -1,4 +1,4 @@
-# JC Salons Landing Page
+# Salons by JC Landing Page
 
 Hi,
 
