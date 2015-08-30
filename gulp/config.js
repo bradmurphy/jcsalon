@@ -48,7 +48,7 @@ var config = {
       entry: './app/index.js'
     },
     load: {
-      entry: './app/index.js'
+      entry: './app/load.js'
     },
     bower: {
       src: './bower.json'
