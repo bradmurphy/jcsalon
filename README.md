@@ -1,6 +1,8 @@
-# Getting started
+# JC Salons Landing Page
 
-This scaffold has three global dependencies: Node, Gulp, and Bower. To install Node, find the installer here:
+Hi,
+
+This scaffold is used for a Salons by JC landing page.  It requires two global dependencies - Node and Gulp.  To install Node, find the installer here:
 
 * [Node](https://nodejs.org/)
     
@@ -8,15 +10,10 @@ To install Gulp 4, run:
  
     npm run gulp4
 
-To install Bower, run:
-
-    npm install bower -g
-
 Finally, to install local project dependencies, run:
 
     npm install
-    bower install
-     
+
 To kick off a dev build, start a local server and open the project in a browser, run:
 
     gulp
