@@ -45,7 +45,7 @@ var config = {
   scripts: {
     app: {
       src: ['./app/**/*.js', '!./app/vendor/**/*.js'],
-      entry: './app/index.js'
+      entry: './app/app.js'
     },
     load: {
       entry: './app/load.js'

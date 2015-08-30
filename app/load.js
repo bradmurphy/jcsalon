@@ -1,8 +1,9 @@
 'use strict';
 
-var config = require('./config');
 var Loader = require('./core/Loader');
-var browser = require('bowser');
-var page = require('./index');
+var Animation = require('./animation');
+var config = require('./config');
+var app = require('./app');
 
+var animation = new Animation();
 var loader = new Loader(config.manifest);
