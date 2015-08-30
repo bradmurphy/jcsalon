@@ -25,7 +25,7 @@ app.controller('jcLocationCtrl', ['$scope', function($scope) {
 		    zoom: 8,
 		    center: latLng,
 		    mapTypeId: google.maps.MapTypeId.ROADMAP
-		  }
+		  };
 
 			$scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
@@ -41,7 +41,7 @@ app.controller('jcLocationCtrl', ['$scope', function($scope) {
 			        title: info.name
 			    });
 
-			    marker.content = '<div class="info-block window">' 
+			    marker.content = '<div class="info-block window">'
 			    + '<span>' + info.address + '</span>'
 			    + '<span>' + info.cityState + '</span>'
 			   	+ '<a ng-href="' + info.telLink + '">' + info.tel + '</a>' + '<br/>'
@@ -59,7 +59,7 @@ app.controller('jcLocationCtrl', ['$scope', function($scope) {
 			
 			for (var i = 0; i < config.locations.length; i++){
 			    createMarker(config.locations[i]);
-			};
+			}
 
 		};
 
