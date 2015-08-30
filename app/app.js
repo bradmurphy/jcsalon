@@ -20,7 +20,8 @@ app.controller('jcLocationCtrl', ['$scope', function($scope) {
 		var mapOptions = {
 	    zoom: 8,
 	    center: latLng,
-	    mapTypeId: google.maps.MapTypeId.ROADMAP
+	    mapTypeId: google.maps.MapTypeId.ROADMAP,
+	    scrollwheel: false
 	  };
 
 		$scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
