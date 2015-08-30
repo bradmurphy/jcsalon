@@ -13,11 +13,11 @@ app.controller('jcLocationCtrl', ['$scope', function($scope) {
 
 	$scope.locations = config.locations;
 
-	var latLng = new google.maps.LatLng(33.975, -84.387982);
+	this.latLng = new google.maps.LatLng(33.975, -84.387982);
 
 	var mapOptions = {
     zoom: 8,
-    center: latLng,
+    center: this.latLng,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     scrollwheel: false
   };
@@ -26,17 +26,17 @@ app.controller('jcLocationCtrl', ['$scope', function($scope) {
 
 	$scope.markers = [];
 	
-	var infoWindow = new google.maps.InfoWindow();
+	this.infoWindow = new google.maps.InfoWindow();
 	
 	var createMarker = function (info){
 	    
-		var marker = new google.maps.Marker({
+		this.marker = new google.maps.Marker({
 		    map: $scope.map,
 		    position: new google.maps.LatLng(info.lat, info.lng),
 		    title: info.name
 		});
 
-		marker.content = '<div class="info-block window">'
+		this.marker.content = '<div class="info-block window">'
 		+ '<span>' + info.address + '</span>'
 		+ '<span>' + info.cityState + '</span>'
 			+ '<a href="' + 'tel:' + info.telLink + '">' + info.tel + '</a>' + '<br/>'
@@ -45,11 +45,11 @@ app.controller('jcLocationCtrl', ['$scope', function($scope) {
 		+ '</div>';
 
 		google.maps.event.addListener(marker, 'click', function(){
-		    infoWindow.setContent('<h2>' + marker.title + '</h2>' + marker.content);
-		    infoWindow.open($scope.map, marker);
+		    this..infoWindow.setContent('<h2>' + this.marker.title + '</h2>' + this.marker.content);
+		    this.infoWindow.open($scope.map, this.marker);
 		});
 
-		$scope.markers.push(marker);
+		$scope.markers.push(this.marker);
 
 	};
 
