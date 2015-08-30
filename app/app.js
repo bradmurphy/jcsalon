@@ -26,17 +26,17 @@ app.controller('jcLocationCtrl', ['$scope', function($scope) {
 
 	$scope.markers = [];
 	
-	this.infoWindow = new google.maps.InfoWindow();
+	var infoWindow = new google.maps.InfoWindow();
 	
-	var createMarker = function (info){
+	this.createMarker = function (info){
 	    
-		this.marker = new google.maps.Marker({
+		var marker = new google.maps.Marker({
 		    map: $scope.map,
 		    position: new google.maps.LatLng(info.lat, info.lng),
 		    title: info.name
 		});
 
-		this.marker.content = '<div class="info-block window">'
+		marker.content = '<div class="info-block window">'
 		+ '<span>' + info.address + '</span>'
 		+ '<span>' + info.cityState + '</span>'
 			+ '<a href="' + 'tel:' + info.telLink + '">' + info.tel + '</a>' + '<br/>'
@@ -45,19 +45,19 @@ app.controller('jcLocationCtrl', ['$scope', function($scope) {
 		+ '</div>';
 
 		google.maps.event.addListener(marker, 'click', function(){
-		    this..infoWindow.setContent('<h2>' + this.marker.title + '</h2>' + this.marker.content);
-		    this.infoWindow.open($scope.map, this.marker);
+		    infoWindow.setContent('<h2>' + marker.title + '</h2>' + marker.content);
+		    infoWindow.open($scope.map, marker);
 		});
 
-		$scope.markers.push(this.marker);
+		$scope.markers.push(marker);
 
 	};
 
-	for (var i = 0; i < config.locations.length; i++){
+	config.locations.forEach(function(loc) {
 
-	  createMarker(config.locations[i]);
+		this.createMarker(loc);
 
-	}
+	}.bind(this));
 
 	if (browser.mobile || browser.tablet) {
 
