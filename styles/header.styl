@@ -5,7 +5,8 @@ header
   width 100%
   height 90px
   background $black
-  box-sizing border-box
+  @media $tablet 
+    height 110px
   @media $tablet 
     height 110px
 
@@ -34,12 +35,11 @@ header
       position absolute
       width 421px
       top 50%
-      transform translateY(-50%)
+      transform translateY(-15%)
       right 10px
       display block
       @media $laptop
         width 496px
-        transform translateY(-15%)
       @media $desktop
         right 0
       ul
@@ -48,7 +48,7 @@ header
         width 100%
         list-style none
         li
-          display inline-block
+          display inline
           margin-right 10px
           text-align center
           &:nth-child(6)
@@ -60,15 +60,8 @@ header
             &:hover
               color $yellow
 
-    // responsive nav styles
+  @media $laptop
+    nav ul li
+      margin-right 25px
 
-    @media $laptop
-      ul li
-        display inline
-        margin-right 25px
-        text-align center
-        a
-          display inline
-        &:nth-child(6)
-          margin-right 0
 
