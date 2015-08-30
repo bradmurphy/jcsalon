@@ -1,0 +1,50 @@
+// about styles
+
+.about
+  width 100%
+  padding: 0 10px
+  box-sizing border-box
+  @media $desktop
+    padding 0
+
+  // cta styles
+
+  .cta 
+    width 100%
+    height 200px
+    margin-bottom 75px
+
+    a
+      float left;
+      display inline-block
+      margin 0
+      padding 10px 0
+      width 100%
+      height 100%
+      box-sizing border-box
+      @media $tablet
+        width 50%
+        padding 10px
+        &:nth-child(1)
+          padding-left 0
+        &:nth-child(2)
+          padding-right 0
+        &:nth-child(3)
+          padding-left 0
+        &:nth-child(4)
+          padding-right 0
+      @media $desktop
+        width 25%
+        &:nth-child(1)
+          padding-left 0
+        &:nth-child(2)
+          padding-right 10px
+        &:nth-child(3)
+          padding-left 10px
+        &:nth-child(4)
+          padding-right 0
+
+      .placeholder
+        background $black
+        width 100%
+        height 100%
