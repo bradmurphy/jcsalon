@@ -41,7 +41,8 @@ app.controller('jcLocationCtrl', ['$scope', function($scope) {
 		    + '<span>' + info.address + '</span>'
 		    + '<span>' + info.cityState + '</span>'
 		   	+ '<a ng-href="' + info.telLink + '">' + info.tel + '</a>' + '<br/>'
-		   	+ '<a href="' + info.dir + '" target="_blank">Directions</a>'
+		   	+ '<a href="' + info.dir + '" target="_blank">Directions</a> | '
+		   	+ '<a href="' + info.web + '" target="_blank">Website</a>'
 		    + '</div>';
 
 		    google.maps.event.addListener(marker, 'click', function(){
