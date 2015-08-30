@@ -30,36 +30,40 @@ app.controller('jcLocationCtrl', ['$scope', function($scope) {
 	
 	var createMarker = function (info){
 	    
-	    var marker = new google.maps.Marker({
-	        map: $scope.map,
-	        position: new google.maps.LatLng(info.lat, info.lng),
-	        title: info.name
-	    });
+		var marker = new google.maps.Marker({
+		    map: $scope.map,
+		    position: new google.maps.LatLng(info.lat, info.lng),
+		    title: info.name
+		});
 
-	    marker.content = '<div class="info-block window">'
-	    + '<span>' + info.address + '</span>'
-	    + '<span>' + info.cityState + '</span>'
-	   	+ '<a href="' + 'tel:' + info.telLink + '">' + info.tel + '</a>' + '<br/>'
-	   	+ '<a href="' + info.dir + '" target="_blank">Directions</a> | '
-	   	+ '<a href="' + info.web + '" target="_blank">Website</a>'
-	    + '</div>';
+		marker.content = '<div class="info-block window">'
+		+ '<span>' + info.address + '</span>'
+		+ '<span>' + info.cityState + '</span>'
+			+ '<a href="' + 'tel:' + info.telLink + '">' + info.tel + '</a>' + '<br/>'
+			+ '<a href="' + info.dir + '" target="_blank">Directions</a> | '
+			+ '<a href="' + info.web + '" target="_blank">Website</a>'
+		+ '</div>';
 
-	    google.maps.event.addListener(marker, 'click', function(){
-	        infoWindow.setContent('<h2>' + marker.title + '</h2>' + marker.content);
-	        infoWindow.open($scope.map, marker);
-	    });
+		google.maps.event.addListener(marker, 'click', function(){
+		    infoWindow.setContent('<h2>' + marker.title + '</h2>' + marker.content);
+		    infoWindow.open($scope.map, marker);
+		});
 
-	    $scope.markers.push(marker);
+		$scope.markers.push(marker);
 
 	};
-	
+
 	for (var i = 0; i < config.locations.length; i++){
+
 	  createMarker(config.locations[i]);
+
 	}
 
-	if (browser.mobile) {
+	if (browser.mobile || browser.tablet) {
+
 		this.map = document.querySelector('#map');
 		this.map.parentNode.removeChild(this.map);
+
 	}
 
 }]);
