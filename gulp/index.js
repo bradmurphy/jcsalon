@@ -27,13 +27,13 @@ gulp.task('scripts-bower', require('./tasks/scripts-bower')( gulp, bs, config.sc
 gulp.task('scripts-vendor', require('./tasks/scripts-vendor')( gulp, bs, config.scripts, config.flags ));
 gulp.task('static', require('./tasks/static')( gulp, bs, config.static ));
 gulp.task('styles', require('./tasks/styles')( gulp, bs, config.styles, config.flags ));
-gulp.task('tests-jscs', require('./tasks/tests-jscs')( gulp, config.tests.lint ));
+// gulp.task('tests-jscs', require('./tasks/tests-jscs')( gulp, config.tests.lint ));
 gulp.task('tests-jshint', require('./tasks/tests-jshint')( gulp, config.tests.lint ));
 gulp.task('tests-mocha', require('./tasks/tests-mocha')( gulp, config.tests.mocha ));
 gulp.task('version', require('./tasks/version')( gulp, config.version ));
 
 gulp.task('scripts', gulp.parallel( 'scripts-app', 'scripts-load', 'scripts-vendor', 'scripts-bower' ));
-gulp.task('tests', gulp.parallel( 'tests-jscs', 'tests-jshint', 'tests-mocha' ));
+gulp.task('tests', gulp.parallel( 'tests-jshint', 'tests-mocha' ));
 
 // define watch actions
 gulp.task('watch', function(done) {

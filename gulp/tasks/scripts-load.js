@@ -35,7 +35,7 @@ module.exports = function( gulp, bs, options, flags ) {
 
     var rebundle = function() {
       return bundler.bundle()
-        .pipe(source('main.load.js'))
+        .pipe(source('main.index.js'))
         .pipe(flags.sourcemap ? buffer() : gutil.noop())
         .pipe(flags.sourcemap ? sourcemaps.init({loadMaps: true}) : gutil.noop())
         .pipe(flags.minify ? streamify(uglify()) : gutil.noop())

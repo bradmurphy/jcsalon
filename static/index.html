@@ -6,10 +6,11 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>JC Salon: Atlanta</title>
-    
     <link rel="stylesheet" href="css/index.css">
   </head>
-  <body>
+  <body ng-app="jcSalon">
+
+    <!-- header -->
 
     <header>
       
@@ -19,12 +20,12 @@
 
         <nav>
           <ul>
-            <li><a href="#" class="nav-link">Home</a></li>
-            <li><a href="#" class="nav-link">About</a></li>
-            <li><a href="#" class="nav-link">Amenities</a></li>
-            <li><a href="#" class="nav-link">Profit Calculator</a></li>
-            <li><a href="#" class="nav-link">Services</a></li>
-            <li><a href="#" class="nav-link">Locations</a></li>
+            <li><a href="http://salonsbyjc.com/" target="_blank" class="nav-link">Home</a></li>
+            <li><a href="http://salonsbyjc.com/amenities/" target="_blank" class="nav-link">About</a></li>
+            <li><a href="http://salonsbyjc.com/about/" target="_blank" class="nav-link">Amenities</a></li>
+            <li><a href="http://salonsbyjc.com/lease-vs-commision/" target="_blank" class="nav-link">Profit Calculator</a></li>
+            <li><a href="http://salonsbyjc.com/services/" target="_blank" class="nav-link">Services</a></li>
+            <li><a href="http://salonsbyjc.com/locations/" target="_blank" class="nav-link">Locations</a></li>
           </ul>
         </nav>
 
@@ -34,7 +35,11 @@
 
     <div class="wrapper">
 
+      <!-- hero -->
+
       <section class="hero"></section>
+
+      <!-- locations and map -->
 
       <section class="location">
         
@@ -42,96 +47,27 @@
 
         <p>We’re changing the salon industry one salon suite at a time.Find the best wellness and beauty specialists <br/> at a Salons by JC near you. We’re expanding, so please check back to find out where we’ll be coming up next!</p>
 
-        <div class="map-container">
+        <div class="map-container" data-ng-controller="jcLocationCtrl">
           
-          <div class="map"></div>
+          <div class="map" id="map"></div>
 
-          <div class="info-block">
+          <div class="info-block" data-ng-repeat="loc in locations">
 
-            <h2>Sandy Springs</h2>
+            <h2>{{ loc.name }}</h2>
 
-            <span>6690 Rosweel Rd. Ste. 404</span>
-            <span>Sandy Springs, GA 30328</span>
-            <a href="tel:770.728.6677">770.728.6677</a>
-
-            <div class="lock-up">
-              <span>More information:</span>
-              <a href="">Directions</a> | 
-              <a href="">Hours</a> | 
-              <a href="">Website</a>
-
-              <div class="social">
-                <a href=""><img src="images/fb.png" alt="Facebook"></a>
-                <a href=""><img src="images/ig.png" alt="Instagram"></a>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="info-block">
-
-            <h2>Sandy Springs</h2>
-
-            <span>6690 Rosweel Rd. Ste. 404</span>
-            <span>Sandy Springs, GA 30328</span>
-            <a href="tel:770.728.6677">770.728.6677</a>
+            <span>{{ loc.address }}</span>
+            <span>{{ loc.cityState }}</span>
+            <a ng-href="tel:{{ loc.telLink }}">{{ loc.tel }}</a>
 
             <div class="lock-up">
               <span>More information:</span>
-              <a href="">Directions</a> | 
-              <a href="">Hours</a> | 
-              <a href="">Website</a>
+              <a ng-href="{{ loc.dir }}" target="_blank">Directions</a> | 
+              <a ng-href="{{ loc.hours }}" target="_blank">Hours</a> | 
+              <a ng-href="{{ loc.web }}" target="_blank">Website</a>
 
               <div class="social">
-                <a href=""><img src="images/fb.png" alt="Facebook"></a>
-                <a href=""><img src="images/ig.png" alt="Instagram"></a>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="info-block">
-
-            <h2>Sandy Springs</h2>
-
-            <span>6690 Rosweel Rd. Ste. 404</span>
-            <span>Sandy Springs, GA 30328</span>
-            <a href="tel:770.728.6677">770.728.6677</a>
-
-            <div class="lock-up">
-              <span>More information:</span>
-              <a href="">Directions</a> | 
-              <a href="">Hours</a> | 
-              <a href="">Website</a>
-
-              <div class="social">
-                <a href=""><img src="images/fb.png" alt="Facebook"></a>
-                <a href=""><img src="images/ig.png" alt="Instagram"></a>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="info-block">
-
-            <h2>Sandy Springs</h2>
-
-            <span>6690 Rosweel Rd. Ste. 404</span>
-            <span>Sandy Springs, GA 30328</span>
-            <a href="tel:770.728.6677">770.728.6677</a>
-
-            <div class="lock-up">
-              <span>More information:</span>
-              <a href="">Directions</a> | 
-              <a href="">Hours</a> | 
-              <a href="">Website</a>
-
-              <div class="social">
-                <a href=""><img src="images/fb.png" alt="Facebook"></a>
-                <a href=""><img src="images/ig.png" alt="Instagram"></a>
+                <a ng-href="{{ loc.fb }}" target="_blank"><img src="images/fb.png" alt="Facebook"></a>
+                <a ng-href="{{ loc.ig }}" target="_blank"><img src="images/ig.png" alt="Instagram"></a>
               </div>
 
             </div>
@@ -139,6 +75,8 @@
           </div>
     
       </section>
+
+      <!-- about -->
 
       <section class="about">
         
@@ -157,6 +95,8 @@
 
     </div>
 
+    <!-- footer -->
+
     <footer>
       
       <div class="wrapper">
@@ -169,7 +109,11 @@
 
     </footer>
 
+    <!-- scripts -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQum7b_-W6YEVATt1iqO-MvXDlWTmP_Tk&callback=initMap"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.js"></script>
     <script src="js/vendor.js"></script>
-    <script src="js/main.load.js"></script>
+    <script src="js/main.index.js"></script>
+
   </body>
 </html>
