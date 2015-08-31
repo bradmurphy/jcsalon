@@ -22,7 +22,8 @@ app.controller('jcLocationCtrl', ['$scope', function($scope) {
         { saturation: -55 },
         { lightness: 30 }
       ]
-    },{
+    },
+    {
       featureType: "road",
       elementType: "geometry.stroke",
       stylers: [
