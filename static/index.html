@@ -40,7 +40,7 @@
   <body ng-app="jcSalon" ng-cloak>
 
     <!-- overlay -->
-    
+
     <div class="overlay"></div>
 
     <!-- header -->
@@ -53,12 +53,24 @@
 
         <nav>
           <ul>
-            <li><a href="http://salonsbyjc.com/" target="_blank" class="nav-link">Home</a></li>
-            <li><a href="http://salonsbyjc.com/about/" target="_blank" class="nav-link">About</a></li>
-            <li><a href="http://salonsbyjc.com/amenities/" target="_blank" class="nav-link">Amenities</a></li>
-            <li><a href="http://salonsbyjc.com/salon-suite-lease/" target="_blank" class="nav-link">Profit Calculator</a></li>
-            <li><a href="http://salonsbyjc.com/services/" target="_blank" class="nav-link">Services</a></li>
-            <li><a href="#locations" class="nav-link">Locations</a></li>
+            <li>
+              <a href="http://salonsbyjc.com/" target="_blank" class="nav-link">Home</a>
+              </li>
+            <li>
+              <a href="http://salonsbyjc.com/about/" target="_blank" class="nav-link">About</a>
+            </li>
+            <li>
+              <a href="http://salonsbyjc.com/amenities/" target="_blank" class="nav-link">Amenities</a>
+            </li>
+            <li>
+              <a href="http://salonsbyjc.com/salon-suite-lease/" target="_blank" class="nav-link">Profit Calculator</a>
+            </li>
+            <li>
+              <a href="http://salonsbyjc.com/services/" target="_blank" class="nav-link">Services</a>
+            </li>
+            <li>
+              <a href="#locations" class="nav-link">Locations</a>
+            </li>
           </ul>
         </nav>
 
@@ -83,8 +95,12 @@
         <p class="animate">We’re changing the salon industry one salon suite at a time.  Find the best wellness and beauty specialists <br/> at a Salons by JC near you.  We’re expanding, so please check back to find out where we’ll be coming up next!</p>
 
         <div class="map-container" data-ng-controller="jcLocationCtrl" id="locations">
-          
+
+          <!-- map -->
+
           <div class="map animate" id="map"></div>
+
+          <!-- locations -->
 
           <div class="info-block" data-ng-repeat="loc in locations">
 
@@ -107,7 +123,7 @@
             </div>
 
           </div>
-    
+
       </section>
 
       <!-- about -->
@@ -132,12 +148,11 @@
     <!-- footer -->
 
     <footer>
-      
+
       <div class="wrapper">
-        
+
         <span class="left">&copy; 2015 Salons by JC</span>
         <span class="right"><strong>contact us</strong> Go with your gut, give us a call.</span>
-
 
       </div>
 
