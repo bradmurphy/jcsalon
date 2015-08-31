@@ -40,8 +40,8 @@ app.controller('jcLocationCtrl', ['$scope', function($scope) {
     center: this.latLng,
     scrollwheel: false,
     mapTypeControlOptions: {
-          mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
-        }
+      mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+    }
   };
 
 	$scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
