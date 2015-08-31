@@ -1,6 +1,6 @@
 # Salons by JC Landing Page
 
-Hi,
+Greetings,
 
 This scaffold is used for a Salons by JC landing page.  It requires two global dependencies - Node and Gulp.  To install Node, find the installer here:
 
