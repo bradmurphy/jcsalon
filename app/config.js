@@ -7,7 +7,11 @@ var config = {
     {src: './images/hero.jpg'},
     {src: './images/fb.png'},
     {src: './images/ig.png'},
-    {src: './images/bg.jpg'}
+    {src: './images/bg.jpg'},
+    {src: './images/amenities.jpg'},
+    {src: './images/profit.jpg'},
+    {src: './images/services.jpg'},
+    {src: './images/virtual.jpg'},
   ],
 
   locations: [
