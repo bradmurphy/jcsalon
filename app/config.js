@@ -28,21 +28,6 @@ var config = {
 		},
 
 		{
-			name: 'Atlanta Midtown',
-			address: '1544 Piedmont Avenue, Suite 117',
-			cityState: 'Atlanta, GA 30324',
-			telLink: '7704645792',
-			tel: '770.464.5792',
-			dir: 'https://www.google.com/maps/dir/Current+Location/33.798938,-84.371742',
-			hours: 'http://salonsbyjc.com/atlanta-ansley-mall/',
-			web: 'http://salonsbyjc.com/atlanta-ansley-mall/',
-			fb: 'https://www.facebook.com/salonsbyjcmidtown',
-			ig: 'https://instagram.com/salonsbyjcmidtownatlanta/',
-			lat: 33.798938,
-			lng: -84.371742
-		},
-
-		{
 			name: 'Buford',
 			address: '3189 Buford Drive, Suite 1339',
 			cityState: 'Buford, GA 30519',
@@ -55,6 +40,21 @@ var config = {
 			ig: 'https://instagram.com/salonsbyjc_buford/',
 			lat: 34.060510,
 			lng: -83.990751
+		},
+
+		{
+			name: 'Midtown',
+			address: '1544 Piedmont Avenue, Suite 117',
+			cityState: 'Atlanta, GA 30324',
+			telLink: '7704645792',
+			tel: '770.464.5792',
+			dir: 'https://www.google.com/maps/dir/Current+Location/33.798938,-84.371742',
+			hours: 'http://salonsbyjc.com/atlanta-ansley-mall/',
+			web: 'http://salonsbyjc.com/atlanta-ansley-mall/',
+			fb: 'https://www.facebook.com/salonsbyjcmidtown',
+			ig: 'https://instagram.com/salonsbyjcmidtownatlanta/',
+			lat: 33.798938,
+			lng: -84.371742
 		},
 
 		{

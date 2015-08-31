@@ -13,10 +13,10 @@ app.controller('jcLocationCtrl', ['$scope', function($scope) {
 
 	$scope.locations = config.locations;
 
-	this.latLng = new google.maps.LatLng(33.975, -84.387982);
+	this.latLng = new google.maps.LatLng(config.locations[3].lat, config.locations[3].lng);
 
 	var mapOptions = {
-    zoom: 8,
+    zoom: 10,
     center: this.latLng,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     scrollwheel: false
