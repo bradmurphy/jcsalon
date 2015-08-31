@@ -15,25 +15,52 @@ app.controller('jcLocationCtrl', ['$scope', function($scope) {
 
 	this.latLng = new google.maps.LatLng(config.locations[3].lat, config.locations[3].lng);
 
+	var styles = [
+    {
+      stylers: [
+        { hue: "#007178" },
+        { saturation: -55 },
+        { lightness: 30 }
+      ]
+    },{
+      featureType: "road",
+      elementType: "geometry.stroke",
+      stylers: [
+        { lightness: 100 },
+        { visibility: "simplified" }
+      ]
+    }
+  ];
+
+  var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
+
 	var mapOptions = {
     zoom: 10,
     center: this.latLng,
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
-    scrollwheel: false
+    scrollwheel: false,
+    mapTypeControlOptions: {
+          mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+        }
   };
 
 	$scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+	$scope.map.mapTypes.set('map_style', styledMap);
+	$scope.map.setMapTypeId('map_style');
 
 	$scope.markers = [];
 	
 	var infoWindow = new google.maps.InfoWindow();
 	
 	this.createMarker = function (info){
-	    
+
+		var markerIcon = 'images/favicon.png';
+
 		var marker = new google.maps.Marker({
 		    map: $scope.map,
 		    position: new google.maps.LatLng(info.lat, info.lng),
-		    title: info.name
+		    title: info.name,
+		    icon: markerIcon
 		});
 
 		marker.content = '<div class="info-block window">'

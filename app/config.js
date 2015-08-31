@@ -8,6 +8,7 @@ var config = {
     {src: './images/fb.png'},
     {src: './images/ig.png'},
     {src: './images/bg.jpg'},
+    {src: './images/favicon.png'},
     {src: './images/amenities.jpg'},
     {src: './images/profit.jpg'},
     {src: './images/services.jpg'},
