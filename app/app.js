@@ -12,6 +12,7 @@ var app = angular.module('jcSalon', []);
 app.controller('jcLocationCtrl', ['$scope', function($scope) {
 
 	$scope.locations = config.locations;
+	$scope.styledMap = false;
 
 	this.latLng = new google.maps.LatLng(config.locations[3].lat, config.locations[3].lng);
 
@@ -51,14 +52,29 @@ app.controller('jcLocationCtrl', ['$scope', function($scope) {
 	
 	var infoWindow = new google.maps.InfoWindow();
 	
-	this.createMarker = function (info){
+	var marker;
 
-		var marker = new google.maps.Marker({
-		    map: $scope.map,
-		    position: new google.maps.LatLng(info.lat, info.lng),
-		    title: info.name,
-		    icon: info.marker
-		});
+	var createMarker = function (info, marker){
+
+		if (marker) {
+
+			marker = new google.maps.Marker({
+			    map: $scope.map,
+			    position: new google.maps.LatLng(info.lat, info.lng),
+			    title: info.name,
+			    icon: marker.marker
+			});
+
+		} else {
+
+			marker = new google.maps.Marker({
+			    map: $scope.map,
+			    position: new google.maps.LatLng(info.lat, info.lng),
+			    title: info.name
+			});
+
+		}
+		
 
 		marker.content = '<div class="info-block window">'
 		+ '<span>' + info.address + '</span>'
@@ -77,11 +93,41 @@ app.controller('jcLocationCtrl', ['$scope', function($scope) {
 
 	};
 
+	$scope.map.addListener('maptypeid_changed', function() {
+
+		if ($scope.styledMap) {
+
+			$scope.markers.forEach(function(el) {
+				el.setMap(null);
+			});
+
+			config.locations.forEach(function(loc) {
+				createMarker(loc, loc);
+			});
+
+			$scope.styledMap = false;
+
+		} else {
+
+			$scope.markers.forEach(function(el) {
+				el.setMap(null);
+			});
+
+			config.locations.forEach(function(loc) {
+				createMarker(loc);
+			});
+
+			$scope.styledMap = true;
+
+		}
+
+	});
+
 	config.locations.forEach(function(loc) {
 
-		this.createMarker(loc);
+		createMarker(loc, loc);
 
-	}.bind(this));
+	});
 
 	if (browser.mobile || browser.tablet) {
 

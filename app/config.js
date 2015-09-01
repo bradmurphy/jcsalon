@@ -13,7 +13,6 @@ var config = {
     {src: './images/midtown.png'},
     {src: './images/sandysprings.png'},
     {src: './images/favicon.png'},
-    {src: './images/marker.png'},
     {src: './images/amenities.jpg'},
     {src: './images/profit.jpg'},
     {src: './images/services.jpg'},
