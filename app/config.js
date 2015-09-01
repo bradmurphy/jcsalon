@@ -9,6 +9,7 @@ var config = {
     {src: './images/ig.png'},
     {src: './images/bg.jpg'},
     {src: './images/favicon.png'},
+    {src: './images/marker.png'},
     {src: './images/amenities.jpg'},
     {src: './images/profit.jpg'},
     {src: './images/services.jpg'},

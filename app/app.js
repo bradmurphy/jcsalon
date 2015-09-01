@@ -55,7 +55,7 @@ app.controller('jcLocationCtrl', ['$scope', function($scope) {
 	
 	this.createMarker = function (info){
 
-		var markerIcon = 'images/favicon.png';
+		var markerIcon = 'images/marker.png';
 
 		var marker = new google.maps.Marker({
 		    map: $scope.map,
