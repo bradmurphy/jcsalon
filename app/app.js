@@ -19,20 +19,20 @@ app.controller('jcLocationCtrl', ['$scope', function($scope) {
 	var styles = [
     {
       stylers: [
-        { hue: "#007178" },
+        { hue: '#007178' },
         { saturation: -55 },
         { lightness: 30 }
       ]
     },
     {
-      elementType: "labels.text",
+      elementType: 'labels.text',
       stylers: [
-        { visibility: "off" }
+        { visibility: 'off' }
       ]
     }
   ];
 
-  var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
+  var styledMap = new google.maps.StyledMapType(styles, {name: 'Styled Map'});
 
 	var mapOptions = {
     zoom: 10,
