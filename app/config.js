@@ -8,6 +8,10 @@ var config = {
     {src: './images/fb.png'},
     {src: './images/ig.png'},
     {src: './images/bg.jpg'},
+    {src: './images/alpharettajpg'},
+    {src: './images/buford.jpg'},
+    {src: './images/midtown.jpg'},
+    {src: './images/sandysprings.jpg'},
     {src: './images/favicon.png'},
     {src: './images/marker.png'},
     {src: './images/amenities.jpg'},
@@ -29,7 +33,8 @@ var config = {
 			fb: 'https://www.facebook.com/pages/Salons-by-JC-Alpharetta/876484342370968',
 			ig: 'https://instagram.com/salonsbyjc_alpharetta/',
 			lat: 34.069504,
-			lng: -84.295151
+			lng: -84.295151,
+			marker: 'images/alpharetta.png'
 		},
 
 		{
@@ -43,7 +48,8 @@ var config = {
 			fb: 'https://www.facebook.com/salonsbyjcbuford?fref=ts',
 			ig: 'https://instagram.com/salonsbyjc_buford/',
 			lat: 34.060510,
-			lng: -83.990751
+			lng: -83.990751,
+			marker: 'images/buford.png'
 		},
 
 		{
@@ -57,7 +63,8 @@ var config = {
 			fb: 'https://www.facebook.com/salonsbyjcmidtown',
 			ig: 'https://instagram.com/salonsbyjcmidtownatlanta/',
 			lat: 33.798938,
-			lng: -84.371742
+			lng: -84.371742,
+			marker: 'images/midtown.png'
 		},
 
 		{
@@ -71,7 +78,8 @@ var config = {
 			fb: 'https://www.facebook.com/sbjcsandysprings',
 			ig: 'https://instagram.com/salonsbyjcssprings/',
 			lat: 33.938011,
-			lng: -84.379769
+			lng: -84.379769,
+			marker: 'images/sandysprings.png'
 		}
   ]
 

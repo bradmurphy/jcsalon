@@ -24,11 +24,9 @@ app.controller('jcLocationCtrl', ['$scope', function($scope) {
       ]
     },
     {
-      featureType: "road",
-      elementType: "geometry.stroke",
+      elementType: "labels.text",
       stylers: [
-        { lightness: 100 },
-        { visibility: "simplified" }
+        { visibility: "off" }
       ]
     }
   ];
@@ -55,13 +53,11 @@ app.controller('jcLocationCtrl', ['$scope', function($scope) {
 	
 	this.createMarker = function (info){
 
-		var markerIcon = 'images/marker.png';
-
 		var marker = new google.maps.Marker({
 		    map: $scope.map,
 		    position: new google.maps.LatLng(info.lat, info.lng),
 		    title: info.name,
-		    icon: markerIcon
+		    icon: info.marker
 		});
 
 		marker.content = '<div class="info-block window">'
