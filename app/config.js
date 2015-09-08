@@ -31,6 +31,7 @@ var config = {
 			web: 'http://salonsbyjc.com/alpharetta-alpharetta-crossing/',
 			fb: 'https://www.facebook.com/pages/Salons-by-JC-Alpharetta/876484342370968',
 			ig: 'https://instagram.com/salonsbyjc_alpharetta/',
+      contact: 'http://salonsbyjc.com/alpharetta-alpharetta-crossing/contact-us/',
 			lat: 34.069504,
 			lng: -84.295151,
 			marker: 'images/alpharetta.png'
@@ -46,6 +47,7 @@ var config = {
 			web: 'http://salonsbyjc.com/buford/',
 			fb: 'https://www.facebook.com/salonsbyjcbuford?fref=ts',
 			ig: 'https://instagram.com/salonsbyjc_buford/',
+      contact: 'http://salonsbyjc.com/buford/contact-us/',
 			lat: 34.060510,
 			lng: -83.990751,
 			marker: 'images/buford.png'
@@ -61,6 +63,7 @@ var config = {
 			web: 'http://salonsbyjc.com/atlanta-ansley-mall/',
 			fb: 'https://www.facebook.com/salonsbyjcmidtown',
 			ig: 'https://instagram.com/salonsbyjcmidtownatlanta/',
+      contact: 'http://salonsbyjc.com/atlanta-ansley-mall/contact-us/',
 			lat: 33.798938,
 			lng: -84.371742,
 			marker: 'images/midtown.png'
@@ -76,6 +79,7 @@ var config = {
 			web: 'http://salonsbyjc.com/sandy-springs-crossing/',
 			fb: 'https://www.facebook.com/sbjcsandysprings',
 			ig: 'https://instagram.com/salonsbyjcssprings/',
+      contact: 'http://salonsbyjc.com/sandy-springs-crossing/contact-us/',
 			lat: 33.938011,
 			lng: -84.379769,
 			marker: 'images/sandysprings.png'
