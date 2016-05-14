@@ -54,12 +54,7 @@ var config = {
       src: './bower.json'
     },
     vendor: {
-      src: ['./app/vendor/easeljs-0.8.1.min.js',
-      './app/vendor/tweenjs-0.6.1.min.js',
-      './app/vendor/movieclip-0.8.1.min.js',
-      './app/vendor/preloadjs-0.6.0.min.js',
-      './app/vendor/Youtube_Beacon05_Lily_970x250.js',
-      './app/vendor/**/*.js']
+      src: ['./app/vendor/TweenMax.min.js']
     },
     dist: dest + '/js/'
   },
